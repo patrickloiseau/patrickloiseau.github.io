@@ -1,0 +1,297 @@
+
+#+TITLE: CHAPITRE 3 : Relations d'équivalence et ensemble quotient
+#+AUTHOR: Michaël PÉRIM
+
+* Rappel des définitions
+
+*** Définition: une relation R:AxA est une relation d'équivalence sur A si R est reflexive, symétrique et transitive
+
+*Notation* on utilise souvent le symbole "~":AxA au lieu de R:AxA pour une relation d'équivalence
+
+  "~" est reflexive   ie.  QQ a:A.  a ~ a
+  "~" est symétrique  ie.  QQ a1,a2:A.  a1 ~ a2  ==> a2 ~ a1
+  "~" est transitive  ie.  QQ a1,a2,a3:A.  a1 ~ a2  /\ a2 ~ a3 ==> a1 ~ a3
+  
+
+*** Exemples de relations d'équivalence
+
+Sans le savoir vous vivez dans un monde d'équivalences !
+
+1. La plus petite relation d'équivalence (celle qui a le moins d'arcs) est la relation d'égalité sur A qu'on note "=" :
+
+2. Relation d'équivalence sur les heures :
+
+    18:45  ~  6:45 PM  ~ 7h moins le quart
+
+3. Relation d'équivalence sur les sacs d'aspirateurs : regardez votre boîte de sacs d'aspirateurs vous verrez que vos sacs conviennent à plusieurs marques d'aspirateurs
+
+    Hoover 500 ~ Miele Boost ~ Rowenta Plus 
+     
+    Dyson ~ Air pulse II ~ Philips Clean   (qui n'ont pas de sacs...)
+
+    mais Hoover 500 ~/~ Dyson
+
+4. Les mathématiciens aiment faire remarquer qu'il existe une relation d'équivalence sur les rationnels 
+
+    3/2 ~ 6/4 ~ 9/6     et    1/2 ~ 2/4 ~ 3/6
+
+5. La définition des ensembles repose sur une relation d'équivalence qui dit que 
+
+   {1,2} ~ {2,1} ~ {1,1,1,1,2} ~ {1,2,1,2} 
+
+
+*** Classes d'équivalence
+
+  La classe d'équivalence d'un élément /a/ de A est notée  /Cl(a)/
+
+  c'est l'ensemble des éléments qui sont équivalent à /a/ pour la relation "~"
+ 
+    Cl(a) = { x:A | x ~ a }
+
+*Exemples* 
+
+1. Cl(Hoover 500) = {  Hoover 500, Miele Boost, Rowenta Plus } 
+
+2. Cl(Hoover 500) = Cl(Miele Boost) = Cl(Rowenta Plus)  puisque ces trois références de sacs sont équivalentes.
+
+
+*** Une relation d'équivalence ~:AxA definit une partition de A en classes d'équivalences : 
+
+
+    1)  L'ensemble A correspond exactement à la réunion des classes d'équivalences de "~"
+
+          A  =  Union_{a:A} Cl(a) 
+
+	Autrement dit, les classes d'équivalences de "~" partionnent l'ensemble A en sous-ensembles disjoints :
+	- les éléments équivalents à a1
+        - les éléments équivalents à a2 ...
+
+    2)  si a ~/~ a'  alors  Cl(a) inter Cl(a')= {} 
+
+	si deux éléments a et a' ne sont pas équivalents alors leurs classes d'équivalences n'ont pas d'éléments en commun.
+
+    3)  si  a ~ a' alors Cl(a) = Cl(a')
+
+	si deux éléments a et a' sont équivalents alors leurs classes d'équivalences sont les mêmes
+
+
+    Les propriétés 2 et 3 se résume ainsi : deux classes d'équivalences sont soit disjointes soit confondues.
+
+
+*** Réciproquement, une partition de A définit une relation d'équivalence 
+
+ Supposons que l'ensemble A  correspondent à l'union de sous-ensembles A1,...., An
+
+  ie.   /A = A1 union A2  union .... union An/
+
+ alors la relation R:AxA  définit par   
+
+  x R y  /si et seulement si/   /il existe i tel que  x et y sont dans le même sous-ensemble Ai/
+
+ est une relation d'équivalence.
+
+ 
+
+* Utilités des relations d'équivalences
+
+** La réprésentation de données
+
+Regardez un dictionnaire, vous verrez que l'informatique est définie comme « l'activité de traitement automatisé d'informations».
+Chaque fois qu'un informaticien doit écrire un programme de traitement d'informations, il commence par se demander comment représenter en mémoire les données à traiter.
+Nous allons voir qu'aussitôt surgissent des questions qui font appels aux relations d'équivalences, classes d'équivalence, représentant canonique, ensemble quotient.
+
+Pour illustrer ce cours nous considérerons trois exemples : les ensembles et les expressions arithmétiques et les rationnels.
+
+*** Exemple des les expressions arithmétiques
+
+On aimerait représenter des expressions arithmétiques qui comportent des variables a,b,... ; des opérateurs +,-,*, ... ; des constances 0, 1, ...; des parenthèse (,).
+
+Exemple : a + b + c
+
+On constate rapidement qu'il y a une infinité de manière de représenter  a + b + c :
+ 1. a + b + c
+ 2. a + c + b
+ 3. (a + c) + b
+ 4. (a + 0 + c) * 1 + b
+ 5. 1 * (0 + 1 * (0 + 1 * (0 + a + b + c)))
+ 6. ...
+
+et que toutes ces représentations sont équivalentes (tiens, tiens, voici qu'apparaît la notion d'équivalence).
+mais que « a + b + c » est la version la plus élégante, la plus « canon » (tiens, tiens, voici qu'apparaît la notion de représentant canonique).
+
+*Remarque: Il faut bien différencier la notion d'égalité de la notion d'équivalence.*
+
+- « a + b + c » et « a + c + b » ne sont pas égale (noté "=") puisqu'on remarque bien que c et b ne sont pas à la même place dans ces deux expressions.
+- En revanche elles sont équivalentes (noté "~") puisqu'elles donneront la même valeur qu'elles que soient les valeurs de a,b,c.
+
+Les mathématiciens ont la facheuse habitude d'écrire « a + b + c » = « a + c + b » (égalité) 
+alors que *il faudrait écrire*  « a + b + c » ~ « a + c + b » ( ~ signifie équivalence)
+
+
+*** Exemple des rationnels
+
+Il y a de nombreuses façons équivalentes de réprésenter chaque fraction : 
+
+1/2 ~ 2/4 ~ 3/6 ~ 4/8 ~ ...~ 4.10^248 / 8.10^248 ~ ...
+
+3/2 ~ 6/4 ~ 9/6 ~ 12/8 ~ ...~ 12.10^248 / 8.10^248 ~ ...
+
+
+*** Exemple des ensembles 
+
+Il y a de nombreuses façons équivalentes de représenter chaque ensemble :
+
+ {1} ~  {1,1} ~ {1,1,1} ~ ... ~ {1,1,...,1} ~ ...
+
+ {1,2} ~ {2,1} ~ {1,2,1} ~ {2,2,1} ~ ...
+
+C'est troublant mais ce sont bien des réprésentations équivalentes puisque la définition dit 
+*Deux ensembles E et F sont équivalents si les éléments de E apparaissent (au moins une fois) dans F et réciproqement.*
+
+
+** Représentant canonique et relation d'équivalence induite
+
+Dés qu'ils ont choisi une représentation des données A. Les informaticiens définissent une fonction /canon : A -> A/
+qui à chaque élément /a:A/  associe son /représentant canonique/.
+
+Les informaticiens ont l'habitude de définir la relation d'équivalence à partir du représentant canonique de la manière suivante :
+
+*Proposition*  Deux éléments a1,a2:A sont équivalents si leur représentants canoniques sont les mêmes.
+
+Les informaticiens définissent une fonction  (equiv : A * A -> bool ) 
+
+ let equiv (a1,a2) :=  canon(a1) =?= canon(a2)
+
+
+*** Exemple des rationnels 
+
+ canon ( a / b ) :=  fraction_reduite ( a/b )  où  fraction_reduite( a / b) : = a divisé par pgcd(a,b)  /  b divisé par pgcd(a,b) 
+
+ equiv ( a/b , c/d) :=  canon(a/b) =?= canon(c/d) 
+
+ Exemple : 
+
+    canon( 15/21 ) = 5/7
+
+    campm( 10/14 ) = 5/7
+
+    et donc  equiv( 15/21, 10/14 ) == true
+
+
+*** Exemple des expressions arithmétiques
+
+ canon ( ea ) := l'expression ea sans symbole inutile avec les variables apparaissant dans l'ordre alphabétique 
+
+ equiv ( ea1, ea2 ) := canon(ea1) =?= canon(ea2)
+
+ Exemple:
+
+   canon(« 0 + (a + b) + c » )  ==   « a + b + c »
+
+   canon(« b + c + a » )  ==  « a + b + c »
+
+   et donc  equiv(« 0 + (a + b) + c » , « b + c + a » )  ==  true
+
+
+*** Exemple des ensembles
+
+ canon ( ens ) := l'ensemble sans répétition avec les éléments rangés dans l'ordre croissant
+
+ equiv (ens1, ens2) := canon(ens1) =?= canon(ens2)
+
+ Exemple :
+
+   canon ({1,2,2,1}) == {1,2}
+  
+   canon( {2,1} ) == {1,2}
+
+   et donc equiv ( {1,2,2,1} , {2,1} ) == true
+
+
+** Ensemble quotient et ensemble des représentants canoniques
+
+*** Définition: L'ensemble quotient de A par la relation d'équivalence ~, noté A/~, est l'ensemble des classes d'équivalence de la relation ~ :
+
+      A/~  =  { Cl(a) | a:A }   c'est un ensemble d'ensemble
+
+
+*** Définition: L'ensemble des représentants canoniques de A, noté A/[], est en bijection avec l'ensemble quotient A/~
+
+       A/[] = { [a] | a:A }   c'est un sous-ensemble de A, qui ne conserve qu'un élément par classes d'équivalence (l'élément le plus "canon"...)
+
+Les mathématiciens notent  [a]  pour le représentant canonique  donné par la fonction canon : [a] c'est plus rapide à écrire que  canon(a)
+
+*Remarque*
+
+ - Les mathématiciens ont l'habitude de travailler avec l'ensemble quotient A/~ qui est un ensemble d'ensemble. 
+   Ça les oblige à travailler avec des ensembles d'ensembles (mais ils n'ont pas de problèmes de mémoire limitée...)
+   mais cela leur évite d'avoir à choisir un représentant canonique.
+
+ - Les informaticiens préfèrent travailler avec l'ensembles A/[] des représentants canonique qui est une sous-ensemble de A.
+   Ça les oblige à définir la fonction canon mais ça leur donne des représentations plus simples qui prennent moins de places en mémoire.
+
+ 
+*** Exemple des rationnels Q
+
+     Q/~ =  { Cl(1/2) , 
+              Cl(1/3) , 
+              ...  
+             }
+
+         =  { {1/2, 2/4, 3/6, ...} ,
+              {1/3, 2/6, 4/8, ...} ,
+              ... 
+             }
+ 
+     Q/[] = { 1/2, 
+              1/3, 
+              ...
+             }
+    
+
+** Attention, certaines opérations ne préservent pas la canonicité
+
+Pour les informaticiens il est plus simple de travailler avec l'ensemble A/[] des représentants canoniques.
+
+Il faut donc faire attention à programmer les opérations sur A de façon à ce qu'elle ne produise QUE des représentants canoniques.
+
+*** Cas des expressions arithmétiques 
+
+Si on programme l'addition entre deux expressions arithmétiques comme ceci addition (ea1 , ea2) :=  ea1 "+" ea2
+on n'obtient pas forcément un représentant canonique :
+
+  addition ( « a + b + c » , « a + b  » ) ==  « a + b + c + a + b »  n'est pas canonique
+
+  il fallait retourenr  « 2 a + 2 b + c »
+
+Bien sûr, on pourrait programmer l'addition  en faisant le « + » naïf comme ci-dessous puis appeler la fonction « canon »
+pour prendre le représentant canonique. 
+
+  addition_canonique ( ea1 , ea2) := canon (ea1 «+» ea2 )
+
+Ça marcherait mais ça ne serait pas efficace. Il est préférable de chercher un algorithme qui canonise pendant qu'il fait le « + ». 
+
+
+*** Cas des ensembles
+
+Si on programme l'union de deux ensembles comme ceci:  union ( { ens1 } , { ens2 } ) :=  { ens1, ens2 }
+on n'obtient pas forcément un représentant canonique :
+
+  union ( {1,2,3} , {0,2,5} ) ==  {1,2,3,0,2,5}  n'est pas canonique
+
+  il fallait retourenr  {0,1,2,5}
+
+On peut trouver un algorithme qui fait l'union efficacement et retourne un représentant canonique
+
+  
+
+* Les relations d'équivalences sont partout !
+
+On a vu le cas des expressions arithmétiques, des rationnels, des ensembles, des sacs d'aspirateurs, des heures  et il y a beaucoup d'autres.
+
+Chaque fois que vous dîtes « et des brouettes » , « à deux pouièmes » , « modulo des broutilles » , « plus ou moins des poussières » , « au signe près » , « indépendamment de la vitesse », etc... cela cache une relation d'équivalence.
+
+Lorsque vous demandez dans une crepèrie de remplacer le jambon par un oeuf et que le prix ne change pas c'est que les deux crèpes sont équivalentes (pour le prix).
+
+Lorsque le pharmacien vous propose de remplacer un médicament par son médicament générique. Il vous dit que ces médicaments sont équivalents. 
+Ce qu'il ne vous dit pas (mais faîtes lui remarquer la prochaine fois) c'est que le médicament générique est le représentant canonique !

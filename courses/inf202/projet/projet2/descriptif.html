@@ -1,0 +1,143 @@
+<PRE>
+
+<H1>LES TYPES</H1>
+
+<h2>Le type des formules</h2>
+
+Le type formule sert à écrire des formules logiques et des expressions 
+
+type formule = 
+ (* proposition *)
+  | P of string 
+ (* symbols = symbolic constants *)
+  | S of string 
+ (* variable *)
+  | V of string
+ (* constants *)
+  | True | False 
+  | I of int
+ (* logical connectors *) 
+  | Impl of formule * formule
+  | Et of formule * formule
+  | Ou of formule * formule
+  | Qq of var * formule
+  | Ex of var * formule
+  | Neg of formule
+ (* predicate *)
+  | Pred of name * expr list
+ (* operator *)
+  | Op of name * expr list
+  | ...
+
+and expr       = formule
+and var        = formule (* de la forme V ... *)
+and symbol     = formule (* de la forme S ... *)
+
+<h2>Les types hypotheses et conclusion</h2>
+
+type hyp = string * conclusion
+type hypotheses = hyp list
+type conclusion = formule
+
+
+<h2>Le type des arbres de preuve </h2>
+
+type proof_tree =
+  | ADP of int * conclusion (* une preuve à finir *)
+
+  | HYP_apply  of hypotheses * hyp * conclusion 
+
+  | IMPL_elim  of hypotheses * proof_tree * proof_tree * conclusion
+  | IMPL_intro of hypotheses * hyp * proof_tree * conclusion
+
+  | ET_elim of hypotheses * int * proof_tree * conclusion
+  | ET_intro of hypotheses * proof_tree * proof_tree * conclusion
+
+  | OU_elim  of hypotheses * proof_tree * proof_tree * proof_tree * conclusion
+  | OU_intro of hypotheses * int * proof_tree * formule * conclusion
+
+  | QQ_elim  of hypotheses * (expr -> formule) * var * expr   * proof_tree * conclusion
+  | QQ_intro of hypotheses * (expr -> formule) * var * symbol * proof_tree * conclusion
+
+  | EX_intro of hypotheses * (expr -> formule) * var * expr * proof_tree * conclusion
+  | EX_elim  of hypotheses * var * formule * proof_tree * proof_tree * conclusion
+
+  | DEF_apply of hypotheses * name * arguments * proof_tree * conclusion
+
+  | Gap of hypotheses * proof_tree * conclusion   (* sert uniquement à indiquer qu'on va raconter la suite de la preuve en descendant *)
+
+  | ABS_elim  of hypotheses * proof_tree * conclusion
+  | NEGNEG_elim of hypotheses * proof_tree * conclusion
+ 
+  | ...
+
+
+<H1> LES FONCTIONS PRÉDÉFINIES </H1>
+
+Pour transformer une formule en chaine de caractères
+utilisez la fonction déjà définie :
+
+ Term.pretty: formule -> string   
+
+ Term.pretty (Impl(P("A"),P("B")))  retourne la chaîne  "A ==> B"
+
+
+Pour obtenir la conclusion d'une preuve
+utilisez la fonction déjà définie :
+
+  Proof_tree.conclusion_of: proof_tree -> formule
+
+
+Pour concaténer (coller) deux strings utilisez l'opérateur :
+
+  (^) : string ^ string -> string
+
+Pour concaténer plusieurs strings utilisez la fonction :
+
+  String.concat: string -> string list -> string
+
+  Ex: String.concat "+" [ "a" ; "b" ; "c" ] = "a+b+c"
+
+<H1> LE PROJET </H1>
+
+il s'agit d'écrire une fonction 
+
+     pretty_proof: proof_tree -> string
+
+   qui traduit un arbre de preuve en français
+
+Nous vous conseillons de procéder dans l'ordre suivant:
+
+  d'abord les constructeurs (pour avoir 10)
+
+   - HYP_apply
+   - IMPL_intro
+   - IMPL_elim
+   
+   puis pour avoir 12
+   - ET_elim
+   - ET_intro
+
+   puis pour avoir 14
+   - OU_elim
+   - OU_intro
+
+   puis pour avoir 16
+   - QQ_intro
+   - QQ_elim
+
+   puis pour avoir 18
+   - EX_intro
+   - EX_elim
+
+   puis pour avoir 20
+   - DEF_apply
+     
+   puis pour avoir 22
+   - pretty_proof_ascendante
+   - pretty_proof_descendante
+
+   puis pour avoir 24
+   - ABS_elim
+   - NEGNEG_elim
+</PRE>

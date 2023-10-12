@@ -1,0 +1,38 @@
+
+Cours (Patrick Loiseau): 
+	Mercredi 8h00-9h30, salle DLST Amphi A1
+
+Groupe 1: 
+- TD (Patrick Loiseau): 
+	A: Lundi 8h00-9h30, salle DLST D004
+	B: Mercredi 13h30-15h00, salle DLST E202
+- TP (Stéphane Durand): 
+	Jeudi 8h00-9h30, salle DLST B105
+	
+Groupe 2: 
+- TD (Stéphane Durand): 
+	A: Vendredi 9h45-11h15, salle DSLT E206
+	B: Lundi 15h15-16h45, salle DLST B006
+- TP (Stéphane Durand): 
+	Vendredi 8h00-9h30, salle DLST B110
+
+Groupe 3: 
+- TD (Cristian Ene): 
+	A: Vendredi 15h15-16h45, salle DSLT B006
+	B: Lundi 9h45-11h15, salle DLST B007
+- TP (Cristian Ene): 
+	Jeudi 8h00-9h30, salle DLST A103
+
+Groupe 4: 
+- TD (Luc Libralesso): 
+	A: Jeudi 13h30-15h00, salle DSLT A101
+	B: Mardi 17h00-18h30, salle DLST E201
+- TP (Aline Menin): 
+	Jeudi 8h00-9h30, salle DLST A102
+
+Groupe 5: 
+- TD (Aline Menin): 
+	A: Mercredi 15h15-16h45, salle DSLT E201
+	B: Mercredi 17h00-18h30, salle DSLT E201
+- TP (Aline Menin): 
+	Mardi 9h45-11h15, salle DLST B111

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<html>
+ 
+<head>
+ <title>Mathématiques pour l'informaticien : Relation, Ordre, Preuve, Récurrence, Ensemble définis récursivement, Structures de données, ...</title>
+ <link rel="stylesheet" type="text/css" media="screen"  href="../../../css/ujf.css" />
+</head>
+
+<body>
+
+
+<!-- BANIERE -->
+<!--
+<div id="baniere">
+ <A HREF="http://www.ujf-grenoble.fr"><IMG src="" width="750" height="100"/></A>
+</div>
+-->
+<div id="baniere">
+ <A HREF="http://http://www.univ-grenoble-alpes.fr/"><IMG src="" width="750" height="100"/></A>
+</div>
+
+<!-- END BANIERE -->
+
+
+<!-- MENU -->
+
+<div id="menu">
+  <a href="http://lig-membres.imag.fr/loiseapa/courses/inf202/accueil/">INF202</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../organisation/"   onmouseover="onMenu('menu01');" title="Organisation de l'UE">Organisation</a>
+ 
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../cours/" onmouseover="onMenu('menu01');" title="Plan et résumé de cours">Cours</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../exercices/" onmouseover="onMenu('menu02');" title="Fiches d'exercices">Exercices</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../tp/" onmouseover="onMenu('menu03');" title="Sujets de TP">TP</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../projet/" onmouseover="onMenu('menu03');" title="Projet de programmation">Projet</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../outils/" onmouseover="onMenu('menu01');" title="Outils pour travailler chez soi">Outils</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../annales/" onmouseover="onMenu('menu04');" title="Annales d'examen">Annales</a>
+
+</div><!-- menu -->
+
+<!-- END MENU -->
+<!-- TO GENERATE index.html USE: build_web_page ../ body.html > index.html -->
+
+<!-- PAGE -->
+
+<div class="page"> 
+
+ <div class="page_title">Travaux Pratiques</div>
+ <div class="page_box"> 
+  <div class="page_body">
+
+
+
+   <div class="itemize_box">
+    <div class="itemize">
+
+      <h3>Travaux pratiques à réaliser en Python</h3>
+
+      <UL>
+          <LI><B>TP1 : </B> <a href="tp1.pdf">fiche de TP</a></LI>
+          <UL>
+              <LI>Correction: <a href="anneau01.py">fichier anneau01.py</a>, <a href="relation.py">fichier relation.py</a></LI>
+          </UL>
+          <LI><B>TP2 : </B> <a href="tp2.pdf">fiche de TP</a></LI>
+          <LI><B>TP3 : </B> <a href="tp3.pdf">fiche de TP</a></LI>
+      </UL>
+
+    </div>
+   </div><!-- itemize_box -->
+
+
+   <div class="itemize_box">
+    <div class="itemize">
+      <h3>Travaux pratiques à réaliser en Ocaml</h3>
+      
+      <UL>
+	<LI>
+	  <B>Le fichier des règles du prouveur:</B> <a href="ocaml/regles.ml">regles.ml</a>
+	</LI>
+
+	<P></P>
+
+	<OL>
+	  <LI><B>Compilation du prouveur</B>
+	  <OL>
+	    <LI>créez un répertoire <B><FONT size=2><TT>inf124/ocaml/</TT></FONT></B>
+	    <LI>copiez le fichier <A HREF="ocaml/prouveur.tgz">prouveur.tgz</A> dans <B><FONT size=2><TT>inf124/ocaml/</TT></FONT></B></LI>	  
+	    <LI>décompresser le fichier <B>prouveur.tgz</B> avec la commande <B><FONT size=2><TT>tar -xf prouveur.tgz</TT></FONT></B></LI>
+	    <LI>dans le répertoire <B><FONT size=2><TT>prouveur/src/</TT></FONT></B>, exécutez la commande <B><FONT size=2><TT>chmod u+x makeit ; ./makeit</TT></FONT></B></LI>
+	    <LI>vérifiez que vous avez bien les fichiers <B><FONT size=2><TT>prouveur.cmo</TT></FONT></B>
+	        et <B><FONT size=2><TT>prouveur.cmi</TT></FONT></B> dans le répertoire <B><FONT size=2><TT>inf124/ocaml/prouveur/</TT></FONT></B>
+	    </LI>
+	    <LI>
+	      copiez les 4 séries d'exercices dans le répertoire <B><FONT size=2><TT>inf124/ocaml/prouveur/</TT></FONT></B> et faîtes les.
+	    </LI>
+	  </OL>
+	  </LI>
+
+	  <P></P>
+
+	  <LI><B>Chargement du prouveur dans l'interprète ocaml</B></B>
+           <BLOCKQUOTE>
+	  utilisez la commande
+	  <B><FONT size=2><TT>ocaml prouveur.cmo</TT></FONT></B>
+	  <BR>
+	  <I>ou bien</I>
+	  <B><TT><FONT size=2>ocaml</TT></FONT></B>
+	  puis
+	  <B><TT><FONT size=2>#load "prouveur.cmo";;</TT></FONT></B> dans l'interprète
+	  </BLOCKQUOTE>
+	  </LI>
+	
+	<P></P>
+
+	<LI><B>Preuves en déduction naturelle</B>
+	<P></P>
+	<UL>
+	  <LI><B>objectif des TP</B>
+	   <P></P>
+	   Construire des arbres de preuves en ocaml: <a href="ocaml/exo_1_1.html">exo_1_1.html</a>
+	   <BR>
+	   Traduire les arbres de preuve sous forme textuelle.
+	  </LI>
+	  
+	  <P></P>
+
+	  <LI><B>TP 7 - Familiarisation avec le prouveur</B>
+	  <OL>
+	    <LI>Exemple introductif:
+	    <a href="ocaml/serie1.sql.ml">serie1.sql.ml</a>
+	    </LI>
+	    <LI>Preuve propositionnelle:
+	    <a href="ocaml/serie2.sql.ml">serie2.sql.ml</a>
+	    </LI>
+	  </OL>
+	  </LI>
+	  
+	<P></P>
+	  
+	 <LI><B>TP 8 - Preuve utilisant les définitions</B>
+	 <OL>
+	  <LI>de la théorie des ensembles:
+	  <a href="ocaml/serie3.sql.ml">serie3.sql.ml</a>
+	  </LI>
+	  <LI>de la théorie des relations:
+	  <a href="ocaml/serie4.sql.ml">serie4.sql.ml</a>
+	  </LI>
+        </OL>
+        </LI>
+
+	<P></P>
+
+	<LI><B><a href="../projet">PROJET 2</a> - traduction des arbres de preuves en preuve textuelle</B></LI>
+
+	<P></P>
+
+	<LI><B>TP 10 - soutenance du projet 2<B></LI>
+      </UL>
+      </LI>
+    </UL>
+
+    </div>
+   </div><!-- itemize_box -->
+
+  </div><!-- page_body -->
+ </div><!-- page_box -->
+
+
+<!-- END PAGE -->
+
+<!-- BAS DE PAGE -->
+
+<div class="baspage">
+ <div class="baspage_g">
+  <span class="gras">Responsable de l'UE : </span>
+  <span class="baspage_txt">Patrick Loiseau</span>
+ </div>
+
+<!-- END index.html -->

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	      media="screen">
+    <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+	<meta name="Author" content="Oana Goga" />
+    <style>           
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+        
+th {
+  height: 50px;
+}
+        
+table, th, td {
+  border: 1px solid black;
+}
+        
+body {
+  font-family: Arial;
+}    
+div { 
+  margin-left: 100px;
+}
+h1 {
+  font-family: Arial;
+    margin-left: 100px;
+}        
+</style>
+    
+    
+</head>
+
+
+
+    
+    
+
+<body>
+
+<script>
+fbq('track', 'ViewContent', {
+value: 3.50,
+currency: 'USD'
+});
+</script>
+
+
+
+<header class="jumbotron subhead" id="overview">
+    <h1>Introduction to Data Science </h1>
+
+</header>
+
+
+<div class="row">
+<hr />
+</div>
+
+
+
+
+<div id="instructors">
+    <h2> Instructors</h2>
+    <p><a href="http://lig-membres.imag.fr/loiseapa/">Patrick Loiseau</a>, <a href="http://ama.liglab.fr/~gaussier/">Eric Gaussier</a>, <a href="http://lig-membres.imag.fr/gogao/">Oana Goga</a></p>
+</div>    
+    
+<div id="news">
+        <h2> News </h2>
+        <ul>
+            <li>Class time changed on Friday (7th Feb) to <b> 8:30</b> instead of 8:00.</li>
+            <li><strong>Exam <a href="Exam-MOSIG1-IDS-2020-v2.pdf">here</a></strong></li>
+        </ul>
+    
+</div>
+    
+
+<div id="topic">
+        <h2> Topic </h2>
+    <p> This course gives an introduction to data analysis via machine learning methods. The focus is on how to use well the powerful existing machine learning methods so as not to do "bad data analysis"; rather than on giving an exhaustive account of all existing algorithms.</p>
+
+    <p>We will cover basic notions of data analysis (such as cross-validation or regularization), methods for supervised and unsupervised learning (classification, neural networks, recommendation, clustering), and transverse questions of interpretability, explainability and fairness in machine learning.</p>
+
+    <p>The notions are introduced and illustrated through labs and the grading is in part based on a project.</p>
+
+
+    <p><b>Pre-requisite:</b>
+    Basics of Python (incl. numpy), basics of algebra, basics of probability</p>
+    
+</div>
+
+<div id="schedule">
+        <h2> Schedule </h2>
+    
+<table>
+     <tr>
+         <th> Date </th>
+         <th> Topic</th>
+         <th> Instructors</th>
+         <th> Material </th>
+    </tr> 
+    <tr>
+        <td> 7/2 (<b>Warning: 8:30AM</b>)</td>
+        <td> Lecture 1: Introduction to basic notions</td>
+        <td> Patrick</td>
+        <td> [James et al.] Chap. 2 and 5.1</td>
+     </tr>    
+    <tr>
+        <td> 14/2</td>
+        <td> Lecture 2: Supervised learning </td>
+        <td> Eric</td>
+         <td>[James et al.] Chap. 3, 4.1, 4.2, 4.3 and 8.1</td>
+     </tr> 
+    <tr>
+        <td> 21/2		</td>
+        <td> Lab 1: Supervised learning on Scikit-learn + COMPAS dataset analysis</td>
+        <td> Eric, Oana</td>
+        <td><a href="tp-supervised-sklearn.ipynb">Supervised learning notebook (instructions)</a>, <a href="tp-supervised-sklearn-correction.ipynb">Supervised learning notebook (solution)</a>, <a href="compas_exploration_students.ipynb">COMPAS exploration notebook</a></td>
+     </tr>  
+    <tr>
+        <td> 28/2</td>
+        <td> No class (holiday)	</td>
+         <td></td>
+        <td> 
+     </tr> 
+    <tr>
+        <td> 6/3</td>
+        <td> No class	</td>
+         <td></td>
+        <td> 
+     </tr> 
+         <tr> 
+        <td> 13/3 (<b>Warning: 9:30AM</b>)</td>
+        <td> Lecture 3: Neural networks</td>
+        <td> Patrick</td>
+              <td><a href="DL-MOSIG1.pdf">Slides</a>, [Goodfellow et al.] Chap. 6 and 9 </td>
+     </tr> 
+    <tr>
+        <td> 20/3	</td>
+        <td> Lab 2: Neural networks</td>
+        <td> Eric, Patrick</td>
+        <td><a href="NNlab.pdf">lab instructions</a>, <a href="https://framateam.org/signup_user_complete/?id=dw98iq1ffi8oubcoiwm95xm6ur">join the team chat</a></td>
+     </tr> 
+    <tr>
+        <td> 27/3		</td>
+        <td> Lecture 4: Recommender systems</td>
+        <td> Oana</td>
+         <td>[Leskovec et al.] Chap. 9</td>
+     </tr> 
+    <tr>
+        <td> 3/4 	</td>
+        <td> Lab 3: Project </td>
+        <td> Patrick, Oana</td>
+        <td> <a href="ProjectCOMPAS.pdf">Project's instructions</a> </td>
+     </tr> 
+    <tr>
+        <td> 10/4</td>		
+        <td> Lecture 5: Unsupervised learning</td>
+        <td> Eric</td>
+         <td></td>
+     </tr>
+          <tr>
+        <td> 17/4		</td>
+        <td> Lecture 6: Interpretability, Fairness</td>
+        <td> Patrick</td>
+               <td>[Barocas et al.] Chap. 1-2</td>
+   </tr>
+    <tr>
+        <td> 24/4</td>
+        <td> No class (holiday)	</td>
+         <td></td>
+        <td> 
+     </tr> 
+    <tr>
+        <td> 1/5</td>
+        <td> No class (bank holiday)	</td>
+         <td></td>
+        <td> 
+     </tr> 
+    <tr>
+        <td> 5/5</td>		
+        <td> Lab 4: Grading the projects by groups</td>
+        <td> Patrick, Oana</td>
+         <td></td>
+    </tr>
+</table>
+    
+    
+    
+    
+</div>
+
+<div id="material">
+        <h2> Jupyter hub </h2>
+   
+    Feel free to use any software to run the jupyter notebooks. However, if you don't have any, you can use the <a href="https://jupyterhub.u-ga.fr/">UGA hub</a>.
+    
+</div>
+    
+    
+<div id="material">
+        <h2> Reading Material </h2>
+   
+    <ul>
+        <li>
+    [James et al.] Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani. <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/">An Introduction to Statistical Learning, with Applications in R</a>. 
+        </li>
+    
+        <li>
+    [Hastie et al.] Trevor Hastie, Robert Tibshirani, and Jerome Friedman. <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</a>.
+        </li>
+    
+        <li>
+    [Manning et al.] Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze. <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Information Retrieval</a>.
+        </li>
+    
+        <li>
+    [VanderPlas] Jake VanderPlas. <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>. 
+        </li>
+        
+        <li>
+            [Goodfellow et al.] Ian Goodfellow, Yoshua Bengio, and Aaron Courville. <a href="https://www.deeplearningbook.org/">Deep Learning</a>
+        </li>
+        
+        <li>
+            [Leskovec et al.] Jure Leskovec, Anand Rajaraman, and Jeffrey D. Ullman. <a href="http://infolab.stanford.edu/~ullman/mmds/book.pdf">Mining of Massive Datasets</a>
+        </li>
+        <li>
+            [Barocas et al.] Solon Barocas, Moritz Hardt, and Arvind Narayanan <a href="https://fairmlbook.org/">Fairness and machine learning: 
+Limitations and Opportunities</a>
+        </li>
+    </ul>
+            
+    
+</div>
+    
+
+<div id="project">
+        <h2> Course Project </h2>
+
+    
+    
+    <h4>Dataset</h4>
+
+    
+    <p>You will examine the ProPublica COMPAS dataset, which consists of all criminal defendants who were subject to COMPAS screening in Broward County, Florida, during 2013 and 2014. For each defendant, various information fields (‘features’) were also gathered by ProPublica. Broadly, these fields are related to the defendant’s demographic information (e.g., gender and race), criminal history (e.g., the number of prior offenses) and administrative information about the case (e.g., the case number, arrest date, risk of recidivism predicted by the COMPAS tool). Finally, the dataset also contains information about whether the defendant did actually recidivate or not.</p>
+    
+    <p>Link to dataset: <a href=https://github.com/propublica/compas-analysis> COMPAS ProPublica dataset </a></p>
+    <p>The file we will analyze is: compas-scores-two-years.csv</p>
+    
+    
+    <h4>Instructions</h4>
+    
+    <p>The projects instructions can be found <a href="ProjectCOMPAS.pdf">here</a></p>
+    
+    
+</div>
+    
+<div id="grading">
+        <h2> Grading </h2>
+    
+    
+    <p>Grading will be done on the project (60%) and a final exam (40%)</p>
+   
+</div>
+    
+    
+<!--<tr>
+<td align="right"  colspan="2" width="900">
+<p>&nbsp</p><p>&nbsp</p><p>&nbsp</p>
+<img src="images/mpi_logo-trans.png" width=261 height=107 />
+</td>
+</tr>
+-->
+
+</body>
+</html>

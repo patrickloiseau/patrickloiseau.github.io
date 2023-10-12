@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<html>
+ 
+<head>
+ <title>Mathématiques pour l'informaticien : Relation, Ordre, Preuve, Récurrence, Ensemble définis récursivement, Structures de données, ...</title>
+ <link rel="stylesheet" type="text/css" media="screen"  href="../../../css/ujf.css" />
+</head>
+
+<body>
+
+
+<!-- BANIERE -->
+<!--
+<div id="baniere">
+ <A HREF="http://www.ujf-grenoble.fr"><IMG src="" width="750" height="100"/></A>
+</div>
+-->
+<div id="baniere">
+ <A HREF="http://http://www.univ-grenoble-alpes.fr/"><IMG src="" width="750" height="100"/></A>
+</div>
+
+<!-- END BANIERE -->
+
+
+<!-- MENU -->
+
+<div id="menu">
+  <a href="http://www-verimag.imag.fr/~ene/enseignement/L1/inf202/accueil/">INF202</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="http://dlst.ujf-grenoble.fr/index.php?module=ue&view=pdf&idue=636" title="Fiche descriptive de l'UE">Description</a>
+ 
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../cours/" onmouseover="onMenu('menu01');" title="Plan et résumé de cours">Cours</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../exercices/" onmouseover="onMenu('menu02');" title="Thèmes des exposés">Exercices</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../tp/" onmouseover="onMenu('menu03');" title="Projet de programmation non encadré">TP</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../projet/" onmouseover="onMenu('menu03');" title="Projet de programmation non encadré">Projet</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../outils/" onmouseover="onMenu('menu01');" title="Outils pour travailler chez soi">Outils</a>
+
+ <img src="../../../css/fleche_droite.gif">
+ <a href="../annales/" onmouseover="onMenu('menu04');" title="Annales d'examen">Annales</a>
+
+</div><!-- menu -->
+
+<!-- END MENU -->

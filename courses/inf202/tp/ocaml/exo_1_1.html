@@ -1,0 +1,39 @@
+<PRE>
+
+                                                   H1:(H(Socrate) /\ (QQ x, (H(x) ==> M(x))))       
+                                                   __________________________________________ /\_e 2
+H1:(H(Socrate) /\ (QQ x, (H(x) ==> M(x))))         (QQ x, (H(x) ==> M(x)))                          
+__________________________________________ /\_e 1  ___________________________ Qq_e [x:=Socrate]    
+H(Socrate)                                         (H(Socrate) ==> M(Socrate))                      
+____________________________________________________________________________________________________ =>_e
+M(Socrate)
+__________ C.Q.F.D.
+M(Socrate)
+________________________________________________________ =>_i [H1:(H(Socrate) /\ (QQ x, (H(x) ==> M(x))))]
+((H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) ==> M(Socrate))
+
+
+Preuve en français :
+
+Pour montrer  ((H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) ==> M(Socrate)) ,
+supposons  (H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) (hypothèse  [H1]) et on démontrons  M(Socrate).
+
+  Preuve de  M(Socrate) :
+    Commençons par récapituler les hypothèses 
+    On dispose uniquement de l'hypothèse  [H1]  (H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) 
+    
+    Preuve de  (H(Socrate) ==> M(Socrate)) :
+        (QQ x, (H(x) ==> M(x))) qui est la partie gauche de la conjonction
+         (H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) qui correspond à l'hypothèse  [H1]
+      Ainsi la propriété  (H(x) ==> M(x)) est vraie pour tout x , elle l'est donc en particulier pour le cas ( x = Socrate ) ; 
+      d'où  (H(Socrate) ==> M(Socrate))
+    
+    On a d'une part 
+      H(Socrate) qui est la partie droite de la conjonction
+       (H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) qui correspond à l'hypothèse  [H1]
+    et on a d'autre part démontré  (H(Socrate) ==> M(Socrate)) 
+    on en conclut :  M(Socrate)
+
+  Ceci achève la démonstration de :  ((H(Socrate) /\ (QQ x, (H(x) ==> M(x)))) ==> M(Socrate))
+
+</PRE>

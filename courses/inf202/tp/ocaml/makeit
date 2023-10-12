@@ -1,0 +1,5 @@
+ocamlc -w pyz mlist.ml mstring.ml explain.ml file.ml latex.ml option.ml compteur.ml key.ml term.ml ens.ml clonable.ml mep.ml proof_scheme.ml proof_tree.ml convert.ml output_in_ocaml.ml output.ml proof.ml hyp.ml axiom.ml fact.ml def.ml impl.ml et.ml ou.ml eq.ml abs.ml neg.ml rec.ml qq.ml ex.ml thm.ml preuve.ml adp.ml exercice.ml ;
+#
+ocamlc -pack -o prouveur.cmo mlist.cmo mstring.cmo explain.cmo file.cmo latex.cmo option.cmo compteur.cmo key.cmo term.cmo ens.cmo clonable.cmo mep.cmo proof_scheme.cmo proof_tree.cmo convert.cmo output_in_ocaml.cmo output.cmo proof.cmo hyp.cmo axiom.cmo fact.cmo def.cmo impl.cmo et.cmo ou.cmo eq.cmo abs.cmo neg.cmo rec.cmo qq.cmo ex.cmo thm.cmo preuve.cmo adp.cmo exercice.cmo ;
+#
+cp prouveur.cmo prouveur.cmi ../ 

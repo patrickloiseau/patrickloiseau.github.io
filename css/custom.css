@@ -1,0 +1,35 @@
+
+body{padding-top:70px}
+#footer{margin:5em 0}#footer 
+li{float:left;margin-right:1.5em;margin-bottom:1.5em}
+
+
+.date {
+  color: #bb3f22;
+  font-size: small;
+  font-family: monospace;
+  font-weight: bold;
+  padding-right: 1em;
+  vertical-align: top;
+  float: left;
+  width: 100px;
+}
+
+.news {
+  font-weight: normal;
+}
+
+.td {
+   font-weight: normal;
+   vertical-align: top;
+}
+
+ul.updates {
+  list-style-type: none;
+  padding-left:0;
+}
+
+
+
+
+
